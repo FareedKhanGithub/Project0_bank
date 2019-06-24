@@ -1,0 +1,12 @@
+CREATE TABLE customer (personsid NUMBER UNIQUE NOT NULL, personsname varchar2(20), personsage NUMBER NOT NULL,
+personsphonenumber varchar2(15)NOT NULL, personsaddress varchar2(30) NOT NULL,
+personsmoney NUMBER NOT NULL, password varchar2(100) UNIQUE NOT NULL);
+
+ALTER TABLE customer ADD CONSTRAINT chkassets CHECK (personsage >= 18);
+ALTER TABLE customer ADD CONSTRAINT chkasset CHECK (personsmoney >= 0); 
+  
+
+INSERT INTO customer (personsid, personsname, personsage, personsphonenumber, personsaddress, personsmoney, password) 
+           VALUES (4,'eed', 19, 'phonesnum', 'aqwerq', 25, 'wawedr');
+         
+SELECT * FROM customer;     
